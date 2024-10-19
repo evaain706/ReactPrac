@@ -1,6 +1,10 @@
 import { legacy_createStore as createStore } from 'redux';
 
 
+export const INCREMENT = 'increment'; //redux 코드가 많아질때 type선언,적용부분에서 실수를 방지하기위해 상수로 만들어서 export -> 사용하는 컴포넌트에서 import해서 사용하도록
+
+
+
 const initialState = {counter:0,showCounter:true}; //state 선언
 
 const counterReducer = (state = initialState ,action) => {
