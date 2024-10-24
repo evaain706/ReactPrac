@@ -20,7 +20,7 @@ const toggleCartHandler = () => {
 
   return (
     <button className={classes.button} onClick={toggleCartHandler}>
-      <span>My Cart</span>
+      <span>내 장바구니</span>
       <span className={classes.badge}>{cartQuantity}</span>
     </button>
   );
