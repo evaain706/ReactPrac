@@ -1,15 +1,15 @@
 import {useSelector,useDispatch,} from 'react-redux'; //store와 연결하기위해 import
 import React from 'react';
 import { useState } from 'react';
-import { counterActions } from '../store';
+import { counterActions } from '../store/counter-slice';
 import classes from './Counter.module.css';
 
 const Counter = () => {
 
   const [input,setInput] = useState(0);
     
-  const counter = useSelector(state => state.counter); //redux store의 counter state를 가져올때, useSelector를 통하여 가져옴 store의 state가 변경될때마다 Counter 컴포넌트도 재렌더링
-  const show = useSelector(state => state.showCounter);
+  const counter = useSelector(state => state.counter.counter); //configuareStore에서 여러개의 리듀서를 객체형태로 합쳤을경우 state.(slice의 name).(state명)형식으로
+  const show = useSelector(state => state.counter.showCounter);
  
   const dispatch = useDispatch(); //store에서 action을 전달받기위한 함수
 
