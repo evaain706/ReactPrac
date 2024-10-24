@@ -1,6 +1,7 @@
 import {useSelector,useDispatch,} from 'react-redux'; //store와 연결하기위해 import
 import React from 'react';
 import { useState } from 'react';
+import { counterActions } from '../store';
 import classes from './Counter.module.css';
 
 const Counter = () => {
@@ -20,20 +21,20 @@ const Counter = () => {
   }
 
   const incrementHandler = () => {
-    dispatch({type:'increment'});
+    dispatch(counterActions.increment());
   };
 
   const decrementHandler = () => {
-    dispatch({type:'decrement'});
+    dispatch(counterActions.decrement());
   };
 
   const increaseHandler = () => {
-    dispatch({type:'increase',amount : +input}); // action에 amount라는 payload를 추가 store에 있는것과 여기의  이름이 같아야함
+    dispatch(counterActions.increase(+input)); // action에 amount라는 payload를 추가 store에 있는것과 여기의  이름이 같아야함
     console.log(counter)
   };
 
   const toggleCounterHandler = () => {
-    dispatch({type:'toggle'})
+    dispatch(counterActions.toggleCounter())
     
   };
 
