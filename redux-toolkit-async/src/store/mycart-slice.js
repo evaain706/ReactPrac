@@ -9,6 +9,7 @@ initialState:{
     items:[],
     totalQuantity:0,
     totalAmount:0,
+    changed:false,
 },
 
 reducers: {
@@ -23,6 +24,7 @@ reducers: {
   const newItem = action.payload;
   const isExist = state.items.find(item => item.id === newItem.id);
   state.totalQuantity++;
+  state.changed =true;
   if(!isExist){ //장바구니에 존재하지않는 상품 추가시
     state.items.push({
     id: newItem.id,
@@ -41,6 +43,7 @@ reducers: {
     const id = action.payload;
     const isExist = state.items.find(item => item.id === id);
     state.totalQuantity--;
+    state.changed = true;
     if(isExist.quantity === 1){ //장바구니에 상품수량이 1일때
         state.items = state.items.filter(item => item.id !== id);
 
@@ -56,44 +59,12 @@ reducers: {
 
 })
 
-//Thunk 사용
-export const sendCartData = (cart) => {
-  return async (dispatch) => {
-    dispatch(
-     uiActions.showNotification({
-        status:'pending',
-        title:'전송중...',
-        message:'장바구니 데이터 전송중',
-      }))
 
-      const sendRequest =  async () => {
-        const response = await fetch('https://reduxprac-843b3-default-rtdb.firebaseio.com/cart.json',
-          {
-            method:'PUT',
-            body:JSON.stringify(cart), //useSelector로 cart state를 가져왔기때문에 항상 최신의 상태유지가능
-          });
-  
-          if(!response.ok){
-           throw new Error('전송실패')
-          }
-      }
 
-      try{
-        await sendRequest();
-        dispatch(uiActions.showNotification({
-          status:'success',
-          title:'전송성공',
-          message:'장바구니 데이터 전송성공',
-        }))
-      }catch(error){
-          dispatch(uiActions.showNotification({
-            status:'error',
-            title:'전송실패',
-            message:'장바구니 데이터 전송실패',
-          }))
-      }
-  };
-};
+
+
+
+
 
 export const cartActions = cartSlice.actions;
 

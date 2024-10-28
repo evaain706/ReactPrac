@@ -4,7 +4,8 @@ import Cart from './components/Cart/Cart';
 import Layout from './components/Layout/Layout';
 import Products from './components/Shop/Products';
 import Notification from './components/UI/Notification';
-import { sendCartData } from './store/mycart-slice';
+import { cartActions } from './store/mycart-slice';
+import { sendCartData,fetchCartData } from './store/mycart-actions';
 
 
 let isInitial = true;
@@ -19,6 +20,10 @@ function App() {
   const dispatch = useDispatch();
 
 
+  useEffect(()=> {
+    dispatch(fetchCartData());
+
+  },[dispatch])
 
 
   useEffect(()=> {
@@ -27,8 +32,12 @@ function App() {
     isInitial = false;
     return;
    }
+   
+   if(cart.changed){
+    dispatch(sendCartData(cart));
+   }
 
-   dispatch(sendCartData(cart));
+   
   },[cart,dispatch]);
  
 
