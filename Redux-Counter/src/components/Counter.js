@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import classes from './Counter.module.css';
 
+
 const Counter = () => {
 
   const [input,setInput] = useState(0);

@@ -1,6 +1,9 @@
 import { uiActions } from "./ui-slice";
 import { cartActions } from "./mycart-slice";
 
+
+
+//Thunk 사용
 export const fetchCartData = () => {
     return async dispatch => {
         const fetchData =  async () => {
@@ -44,7 +47,7 @@ export const fetchCartData = () => {
 
 
 
-//Thunk 사용
+
 export const sendCartData = (cart) => {
     return async (dispatch) => {
       dispatch(
