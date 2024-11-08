@@ -4,11 +4,19 @@ import { getVideo, apiActions } from "../store/apiSlice";
 import VideoItem from "./VideoItem"; 
 import { getTeams } from "../store/leagueSlice";
 import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const MainBody = () => {
+  const navigate = useNavigate();
   const videos = useSelector((state) => state.football.filteredVideos); 
   const dispatch = useDispatch();
   const input = useRef(null);
+
+
+  const handleBack = () => {
+    navigate(-1);
+
+  }
 
  
   const handleSearch = () => {
@@ -47,6 +55,13 @@ const MainBody = () => {
           className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors mb-8"
         >
           검색
+        </button>
+
+        <button
+          onClick={handleBack}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors mb-8"
+        >
+          뒤로가기
         </button>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

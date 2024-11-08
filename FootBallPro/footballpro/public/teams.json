@@ -1,0 +1,165 @@
+{
+    "teams": [
+      {
+        "id": 1,
+        "name": "Arsenal",
+        "location": "London",
+        "stadium": "Emirates Stadium",
+        "founded": 1886,
+        "image": "images/Arsenal.png"
+      },
+      {
+        "id": 2,
+        "name": "Aston Villa",
+        "location": "Birmingham",
+        "stadium": "Villa Park",
+        "founded": 1874,
+        "image": "images/AstonVilla.png"
+      },
+      {
+        "id": 3,
+        "name": "Bournemouth",
+        "location": "Bournemouth",
+        "stadium": "Vitality Stadium",
+        "founded": 1899,
+        "image": "images/Bournemouth.png"
+      },
+      {
+        "id": 4,
+        "name": "Brentford",
+        "location": "London",
+        "stadium": "Gtech Community Stadium",
+        "founded": 1889,
+        "image": "images/brentford.png"
+      },
+      {
+        "id": 5,
+        "name": "Brighton & Hove Albion",
+        "location": "Brighton",
+        "stadium": "Falmer Stadium",
+        "founded": 1901,
+        "image": "images/brighton.png"
+      },
+      {
+        "id": 6,
+        "name": "Burnley",
+        "location": "Burnley",
+        "stadium": "Turf Moor",
+        "founded": 1882,
+        "image": "images/Leicester.png"
+      },
+      {
+        "id": 7,
+        "name": "Chelsea",
+        "location": "London",
+        "stadium": "Stamford Bridge",
+        "founded": 1905,
+        "image": "images/chelsea.png"
+      },
+      {
+        "id": 8,
+        "name": "Crystal Palace",
+        "location": "London",
+        "stadium": "Selhurst Park",
+        "founded": 1905,
+        "image": "images/Crystal.png"
+      },
+      {
+        "id": 9,
+        "name": "Everton",
+        "location": "Liverpool",
+        "stadium": "Goodison Park",
+        "founded": 1878,
+        "image": "images/everton.png"
+      },
+      {
+        "id": 10,
+        "name": "Fulham",
+        "location": "London",
+        "stadium": "Craven Cottage",
+        "founded": 1879,
+        "image": "images/Fullham.png"
+      },
+      {
+        "id": 11,
+        "name": "Liverpool",
+        "location": "Liverpool",
+        "stadium": "Anfield",
+        "founded": 1892,
+        "image": "images/liverpool.png"
+      },
+      {
+        "id": 12,
+        "name": "Manchester City",
+        "location": "Manchester",
+        "stadium": "Etihad Stadium",
+        "founded": 1880,
+        "image": "images/Mancity.png"
+      },
+      {
+        "id": 13,
+        "name": "Manchester United",
+        "location": "Manchester",
+        "stadium": "Old Trafford",
+        "founded": 1878,
+        "image": "images/Manunited.png"
+      },
+      {
+        "id": 14,
+        "name": "Newcastle United",
+        "location": "Newcastle upon Tyne",
+        "stadium": "St James' Park",
+        "founded": 1892,
+        "image": "images/Newcastle.png"
+      },
+      {
+        "id": 15,
+        "name": "Nottingham Forest",
+        "location": "Nottingham",
+        "stadium": "City Ground",
+        "founded": 1865,
+        "image": "images/Forest.png"
+      },
+      {
+        "id": 16,
+        "name": "Sheffield United",
+        "location": "Sheffield",
+        "stadium": "Bramall Lane",
+        "founded": 1889,
+        "image": "images/South.png"
+      },
+      {
+        "id": 17,
+        "name": "Tottenham Hotspur",
+        "location": "London",
+        "stadium": "Tottenham Hotspur Stadium",
+        "founded": 1882,
+        "image": "images/Tottenham.png"
+      },
+      {
+        "id": 18,
+        "name": "West Ham United",
+        "location": "London",
+        "stadium": "London Stadium",
+        "founded": 1895,
+        "image": "images/WestHam.png"
+      },
+      {
+        "id": 19,
+        "name": "Wolverhampton Wanderers",
+        "location": "Wolverhampton",
+        "stadium": "Molineux Stadium",
+        "founded": 1877,
+        "image": "images/Wolves.png"
+      },
+      {
+        "id": 20,
+        "name": "Luton Town",
+        "location": "Luton",
+        "stadium": "Kenilworth Road",
+        "founded": 1885,
+        "image": "images/Ipswich.png"
+      }
+    ]
+  }
+  
