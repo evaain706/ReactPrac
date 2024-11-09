@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const apiSlice = createSlice({
   name: "football",
@@ -10,10 +14,11 @@ const apiSlice = createSlice({
       state.filteredVideos = action.payload; 
     },
     searchVideo(state, action) {
-        state.filteredVideos = state.videos.filter((video) =>
-          video.title.toLowerCase().includes(action.payload.toLowerCase())
-        );
-      },
+      const filtered = state.videos.filter((video) =>
+        video.title.toLowerCase().includes(action.payload.toLowerCase())
+      );
+      state.filteredVideos = filtered.length > 0 ? filtered : [];
+    },
   },
 });
 
@@ -36,6 +41,10 @@ export const getVideo = () => {
     }
   };
 };
+
+
+
+
 
 export const apiActions = apiSlice.actions;
 

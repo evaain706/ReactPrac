@@ -13,7 +13,9 @@ function App() {
 
       <Route path='/' element={<Teams/>}></Route>
 
-      <Route path='/videos' element={<MainBody/>}></Route>
+      {/* <Route path='/videos' element={<MainBody/>}></Route> */}
+
+      <Route path="/videos/:teamSearch" element={<MainBody />} />
 
       </Routes>
      
