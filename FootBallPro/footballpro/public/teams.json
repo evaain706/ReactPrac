@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Arsenal",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Emirates Stadium",
       "founded": 1886,
       "image": "images/Arsenal.png",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "name": "Aston Villa",
-      "location": "Birmingham",
+      "location": "Birmingham, England",
       "stadium": "Villa Park",
       "founded": 1874,
       "image": "images/AstonVilla.png",
@@ -23,7 +23,7 @@
     {
       "id": 3,
       "name": "Bournemouth",
-      "location": "Bournemouth",
+      "location": "Bournemouth, England",
       "stadium": "Vitality Stadium",
       "founded": 1899,
       "image": "images/Bournemouth.png",
@@ -33,7 +33,7 @@
     {
       "id": 4,
       "name": "Brentford",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Gtech Community Stadium",
       "founded": 1889,
       "image": "images/brentford.png",
@@ -43,7 +43,7 @@
     {
       "id": 5,
       "name": "Brighton & Hove Albion",
-      "location": "Brighton",
+      "location": "Brighton, England",
       "stadium": "Falmer Stadium",
       "founded": 1901,
       "image": "images/brighton.png",
@@ -52,18 +52,18 @@
     },
     {
       "id": 6,
-      "name": "Burnley",
-      "location": "Burnley",
-      "stadium": "Turf Moor",
-      "founded": 1882,
+      "name": "Leicester City",
+      "location": "Leicester, England",
+      "stadium": "King Power Stadium",
+      "founded": 1884,
       "image": "images/Leicester.png",
-      "search": "burnley",
-      "detail": "번리는 전통과 역사 깊은 클럽으로, 홈구장 터프 무어에서의 열정적인 경기로 유명합니다."
+      "search": "leicester",
+      "detail": "레스터 시티는 최근 프리미어 리그에서 우승을 차지하며 큰 주목을 받은 팀입니다."
     },
     {
       "id": 7,
       "name": "Chelsea",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Stamford Bridge",
       "founded": 1905,
       "image": "images/chelsea.png",
@@ -73,7 +73,7 @@
     {
       "id": 8,
       "name": "Crystal Palace",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Selhurst Park",
       "founded": 1905,
       "image": "images/Crystal.png",
@@ -83,7 +83,7 @@
     {
       "id": 9,
       "name": "Everton",
-      "location": "Liverpool",
+      "location": "Liverpool, England",
       "stadium": "Goodison Park",
       "founded": 1878,
       "image": "images/everton.png",
@@ -93,7 +93,7 @@
     {
       "id": 10,
       "name": "Fulham",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Craven Cottage",
       "founded": 1879,
       "image": "images/Fullham.png",
@@ -103,7 +103,7 @@
     {
       "id": 11,
       "name": "Liverpool",
-      "location": "Liverpool",
+      "location": "Liverpool, England",
       "stadium": "Anfield",
       "founded": 1892,
       "image": "images/liverpool.png",
@@ -113,7 +113,7 @@
     {
       "id": 12,
       "name": "Manchester City",
-      "location": "Manchester",
+      "location": "Manchester, England",
       "stadium": "Etihad Stadium",
       "founded": 1880,
       "image": "images/Mancity.png",
@@ -123,7 +123,7 @@
     {
       "id": 13,
       "name": "Manchester United",
-      "location": "Manchester",
+      "location": "Manchester, England",
       "stadium": "Old Trafford",
       "founded": 1878,
       "image": "images/Manunited.png",
@@ -133,7 +133,7 @@
     {
       "id": 14,
       "name": "Newcastle United",
-      "location": "Newcastle upon Tyne",
+      "location": "Newcastle upon Tyne, England",
       "stadium": "St James' Park",
       "founded": 1892,
       "image": "images/Newcastle.png",
@@ -143,7 +143,7 @@
     {
       "id": 15,
       "name": "Nottingham Forest",
-      "location": "Nottingham",
+      "location": "Nottingham, England",
       "stadium": "City Ground",
       "founded": 1865,
       "image": "images/Forest.png",
@@ -152,18 +152,18 @@
     },
     {
       "id": 16,
-      "name": "Sheffield United",
-      "location": "Sheffield",
-      "stadium": "Bramall Lane",
-      "founded": 1889,
+      "name": "SouthHampton",
+      "location": "Southampton, England",
+      "stadium": "St Mary's Stadium",
+      "founded": 1885,
       "image": "images/South.png",
-      "search": "sheffield",
-      "detail": "셰필드 유나이티드는 셰필드 지역을 대표하는 팀으로, 전통 깊은 역사를 자랑합니다."
+      "search": "southampton",
+      "detail": "사우샘프턴은 잉글랜드 남부에 위치한 클럽으로, 강한 홈 성적을 자랑하는 팀입니다."
     },
     {
       "id": 17,
       "name": "Tottenham Hotspur",
-      "location": "London",
+      "location": "London, England",
       "stadium": "Tottenham Hotspur Stadium",
       "founded": 1882,
       "image": "images/Tottenham.png",
@@ -173,7 +173,7 @@
     {
       "id": 18,
       "name": "West Ham United",
-      "location": "London",
+      "location": "London, England",
       "stadium": "London Stadium",
       "founded": 1895,
       "image": "images/WestHam.png",
@@ -183,7 +183,7 @@
     {
       "id": 19,
       "name": "Wolverhampton Wanderers",
-      "location": "Wolverhampton",
+      "location": "Wolverhampton, England",
       "stadium": "Molineux Stadium",
       "founded": 1877,
       "image": "images/Wolves.png",
@@ -192,13 +192,13 @@
     },
     {
       "id": 20,
-      "name": "Luton Town",
-      "location": "Luton",
-      "stadium": "Kenilworth Road",
-      "founded": 1885,
+      "name": "Ipswich Town",
+      "location": "Ipswich, England",
+      "stadium": "Portman Road",
+      "founded": 1878,
       "image": "images/Ipswich.png",
-      "search": "luton",
-      "detail": "루턴 타운은 작지만 강한 팬층을 가지고 있는 클럽으로, 지역 사회와 긴밀히 연계되어 있습니다."
+      "search": "ipswich",
+      "detail": "입스위치 타운은 전통적인 클럽으로, 경기가 열리는 포트먼 로드는 역사 깊은 경기장입니다."
     }
   ]
 }

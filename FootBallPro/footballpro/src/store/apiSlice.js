@@ -2,12 +2,14 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
+const apiToken = process.env.REACT_APP_API_TOKEN
+
 
 
 
 const apiSlice = createSlice({
   name: "football",
-  initialState: { videos: [], filteredVideos: [], isNew: false },
+  initialState: { videos: [], filteredVideos: [], isNew: false, title:null },
   reducers: {
     getVideo(state, action) {
       state.videos = action.payload;
@@ -19,6 +21,9 @@ const apiSlice = createSlice({
       );
       state.filteredVideos = filtered.length > 0 ? filtered : [];
     },
+    setTitle(state,action) {
+      state.title = action.payload;
+    }
   },
 });
 
@@ -31,7 +36,7 @@ export const getVideo = () => {
 
     try {
       const response = await axios.get(
-        "https://www.scorebat.com/video-api/v3/feed/?token=MTg0NzAwXzE3MzA3ODU3ODZfMjRlYjI4OTQ0NDYwZmJlN2I0NTkyYzA2YmZmYTM2MjYyZmRjN2ZiZg=="
+        `https://www.scorebat.com/video-api/v3/feed/?token=${apiToken}`
       );
       const videos = response.data.response;
       console.log('요청함');

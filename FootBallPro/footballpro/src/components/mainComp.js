@@ -9,6 +9,7 @@ const MainBody = () => {
   const { teamSearch } = useParams();
   const navigate = useNavigate();
   const videos = useSelector((state) => state.football.filteredVideos);
+  const title = useSelector((state) => state.football.title);
   const dispatch = useDispatch();
   const input = useRef(null);
 
@@ -31,7 +32,9 @@ const MainBody = () => {
   return (
     <div className="flex flex-col items-center bg-black min-h-screen py-8">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center text-white mb-6">축구 하이라이트</h2>
+
+        {{title} ?<h2 className="text-3xl font-bold text-center text-white mb-6">{title} 하이라이트</h2> : <h2 className="text-3xl font-bold text-center text-white mb-6">하이라이트</h2> }
+       
         <input
           ref={input}
           className="border-4 border-r-4 border-r-slate-900 mb-4"

@@ -4,6 +4,7 @@ import TeamDetails from "./TeamDetial";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { uiActions } from "../store/uiSlice";
+import { apiActions } from "../store/apiSlice";
 
 
 
@@ -13,7 +14,9 @@ function Teams() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const handleTeamClick = (teamSearch) => {
+  const handleTeamClick = (teamSearch,clubName) => {
+
+    dispatch(apiActions.setTitle(clubName));
     navigate(`/videos/${teamSearch}`);
   };
 
@@ -57,7 +60,7 @@ function Teams() {
           
           <button 
             className="py-2 px-4  mt-auto me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 "
-            onClick={() => handleTeamClick(team.search)}
+            onClick={() => handleTeamClick(team.search,team.name)}
           >
             하이라이트 보기
           </button>
