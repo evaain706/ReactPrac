@@ -1,13 +1,31 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import TeamDetails from "./TeamDetial";
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
+import { uiActions } from "../store/uiSlice";
+
+
 
 function Teams() {
   const [teams, setTeams] = useState([]);
+  const [selectedTeam, setSelectedTeam] = useState(null); 
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleTeamClick = (teamSearch) => {
     navigate(`/videos/${teamSearch}`);
   };
+
+  const ui = useSelector((state)=> state.ui.isOpen);
+
+  const openModal = (team) => {
+
+    setSelectedTeam(team);
+    dispatch(uiActions.openModal());
+  }
+  const closeModal = () => dispatch(uiActions.closeModal());
+ 
 
   useEffect(() => {
     fetch("/teams.json")
@@ -19,6 +37,7 @@ function Teams() {
   return (
     <div className="container mx-auto p-4 bg-zinc-300">
     <h1 className="text-3xl font-bold text-center mb-10">EPL 팀목록</h1>
+   
   
     <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {teams.map((team) => (
@@ -42,10 +61,24 @@ function Teams() {
           >
             하이라이트 보기
           </button>
+
+          <button
+           className="absolute top-3 right-3 text-gray-600  font-bold rounded-full border-gray-400  hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 "
+          onClick={() => {openModal(team)}}>?</button>
         </li>
       ))}
     </ul>
+
+    {ui && <TeamDetails team={selectedTeam} closeModal={closeModal}/>}
+ 
+    
   </div>
+
+
+
+  
+
+
   
   );
 }
