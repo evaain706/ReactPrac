@@ -2,10 +2,10 @@ import React from "react";
 
 const TeamDetails = ({ team, closeModal }) => {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 font-gmarket">
       <div className="bg-white shadow-lg rounded-lg p-6 w-96 max-w-full relative">
         <button
-          className="absolute top-3 right-3 text-gray-600 hover:text-gray-800"
+          className="absolute top-3 right-3 text-gray-600 hover:text-gray-800 "
           onClick={closeModal}
         >
           ✕

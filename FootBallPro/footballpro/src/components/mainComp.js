@@ -30,22 +30,22 @@ const MainBody = () => {
   }, [dispatch, teamSearch]);
 
   return (
-    <div className="flex flex-col items-center bg-black min-h-screen py-8">
+    <div className="flex flex-col items-center bg-black min-h-screen py-8 font-gmarket ">
       <div className="container mx-auto px-4">
 
-        {{title} ?<h2 className="text-3xl font-bold text-center text-white mb-6">{title} 하이라이트</h2> : <h2 className="text-3xl font-bold text-center text-white mb-6">하이라이트</h2> }
+        {{title} ?<h2 className="text-3xl font-bold text-center text-white mb-6 ">{title} 하이라이트</h2> : <h2 className="text-3xl font-bold text-center text-white mb-6">하이라이트</h2> }
        
-        <input
+        {/* <input
           ref={input}
           className="border-4 border-r-4 border-r-slate-900 mb-4"
           type="text"
           placeholder="팀명 입력"
-        />
-        <button onClick={handleSearch} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors mb-8">
+        /> */}
+        {/* <button onClick={handleSearch} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors mb-8">
           검색
-        </button>
-        <button onClick={handleBack} className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-700 transition-colors mb-8">
-          뒤로가기
+        </button> */}
+        <button onClick={handleBack} className="px-4 py-2 bg-white text-black rounded hover:bg-gray-500 transition-colors mb-8 font-bold">
+          팀 목록으로 이동
         </button>
         <div>
         {videos.length > 0 ? (
@@ -55,7 +55,7 @@ const MainBody = () => {
             ))}
           </div>
         ) : (
-          <div className="text-white text-center mt-8">해당팀의 하이라이트가 존재하지 않습니다.</div>
+          <div className="text-white text-center mt-8 ">해당팀의 하이라이트가 존재하지 않습니다.</div>
         )}
 </div>
       

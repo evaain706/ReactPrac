@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './index.css'
 import MainBody from './components/mainComp';
 import Teams from './components/Teams';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
