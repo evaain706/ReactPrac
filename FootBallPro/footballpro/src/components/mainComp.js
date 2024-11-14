@@ -10,6 +10,7 @@ const MainBody = () => {
   const navigate = useNavigate();
   const videos = useSelector((state) => state.football.filteredVideos);
   const title = useSelector((state) => state.football.title);
+  const loading = useSelector((state)=> state.football.isloading);
   const dispatch = useDispatch();
   const input = useRef(null);
 
@@ -48,15 +49,20 @@ const MainBody = () => {
           팀 목록으로 이동
         </button>
         <div>
-        {videos.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {videos.map((video, index) => (
-              <VideoItem key={index} video={video} />
-            ))}
-          </div>
-        ) : (
-          <div className="text-white text-center mt-8 ">해당팀의 하이라이트가 존재하지 않습니다.</div>
-        )}
+        {loading ? (
+      
+        <div className="text-white text-center mt-8">불러오는중...</div>
+      ) : videos.length > 0 ? (
+       
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {videos.map((video, index) => (
+            <VideoItem key={index} video={video} />
+          ))}
+        </div>
+      ) : (
+      
+        <div className="text-white text-center mt-8">해당팀의 하이라이트가 존재하지 않습니다.</div>
+      )}
 </div>
       
       </div>
