@@ -4,7 +4,7 @@ import { getVideo, apiActions } from "../store/apiSlice";
 import VideoItem from "./VideoItem";
 import { useParams, useNavigate } from "react-router-dom";
 
-
+//비디오 표시 메인컴포넌트
 const MainBody = () => {
   const { teamSearch } = useParams();
   const navigate = useNavigate();

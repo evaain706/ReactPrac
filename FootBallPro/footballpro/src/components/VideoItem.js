@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//하이라이트 비디오 렌더링 컴포넌트
 //memo를 사용한 최적화
 const VideoItem = React.memo(({ video }) => {
   console.log('Rendering VideoItem');

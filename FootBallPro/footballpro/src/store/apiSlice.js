@@ -7,7 +7,7 @@ const apiToken = process.env.REACT_APP_API_TOKEN
 
 
 
-
+//하이라이트 영상 받아오기 관련 slice
 const apiSlice = createSlice({
   name: "football",
   initialState: { videos: [], filteredVideos: [], isNew: false, title:null , isloading:false },

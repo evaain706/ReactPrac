@@ -4,7 +4,7 @@ import { favActions } from "../store/FavSlice";
 import { useDispatch } from "react-redux";
 
 
-
+//선호하는팀 배열 렌더링 컴포넌트
 const FavModal = ({closeModal}) => {
 
     const dispatch = useDispatch();

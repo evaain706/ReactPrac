@@ -1,5 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+
+//좋아하는팀 배열 관련 slice
 const FavSlice = createSlice({
   name: 'fav',
   initialState: { fav: [] },

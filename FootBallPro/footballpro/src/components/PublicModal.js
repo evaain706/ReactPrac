@@ -3,6 +3,8 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { uiActions } from '../store/uiSlice';
 
+
+//공용모달 컴포넌트
 const PublicModal = () => {
   const dispatch = useDispatch();
   const isOpen = useSelector((state) => state.ui.isPublicModalOpen);  

@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 
-
+//ui관련 slice
 
 const uiSlice = createSlice({
   name: "ui",
@@ -36,30 +36,6 @@ const uiSlice = createSlice({
   
   },
 });
-
-// export const getVideo = () => {
-//   return async (dispatch, getState) => {
-//     const { videos } = getState().football;
-
-   
-//     if (videos.length > 0) return;
-
-//     try {
-//       const response = await axios.get(
-//         `https://www.scorebat.com/video-api/v3/feed/?token=${apiToken}`
-//       );
-//       const videos = response.data.response;
-//       console.log('요청함');
-//       dispatch(apiActions.getVideo(videos));
-//     } catch (error) {
-//       console.log("에러발생", error);
-//     }
-//   };
-// };
-
-
-
-
 
 
 

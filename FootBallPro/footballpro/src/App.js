@@ -3,6 +3,7 @@ import './App.css';
 import './index.css'
 import MainBody from './components/mainComp';
 import Teams from './components/Teams';
+import CommuList from './components/CommuList';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
       {/* <Route path='/videos' element={<MainBody/>}></Route> */}
 
       <Route path="/videos/:teamSearch" element={<MainBody />} />
+
+      <Route path="/commu/:teamid" element={<CommuList/>} />
 
       </Routes>
      

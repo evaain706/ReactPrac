@@ -1,5 +1,7 @@
 import React from "react";
 
+
+//팀별 세부정보 표시 모달 컴포넌트
 const TeamDetails = ({ team, closeModal }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 font-gmarket">

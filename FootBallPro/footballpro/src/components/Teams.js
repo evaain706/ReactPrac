@@ -1,4 +1,4 @@
-// Teams.js
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import TeamDetails from "./TeamDetial";
@@ -8,6 +8,7 @@ import { apiActions } from "../store/apiSlice";
 import { favActions } from "../store/FavSlice";
 import FavModal from "./FavModal";
 import PublicModal from "./PublicModal";
+import { commuActions } from "../store/CommuSlice";
 
 const Teams = () => {
   const [teams, setTeams] = useState([]);
@@ -41,6 +42,16 @@ const Teams = () => {
   const RemoveFromFav = (TeamName) => {
     dispatch(favActions.RemoveFromFav(TeamName));
   };
+
+  const NavigateToCommu = (teamId,teamName) => {
+
+    console.log(teamId,teamName);
+
+    dispatch(commuActions.setTeamName(teamName));
+    dispatch(commuActions.setTeamId(teamId));
+    navigate(`/commu/${teamId}`);
+  }
+
 
   const openModal = (team) => {
     setSelectedTeam(team);
@@ -101,6 +112,14 @@ const Teams = () => {
             >
               하이라이트 보기
             </button>
+
+            <button
+                onClick={() => {
+                  NavigateToCommu(team.id,team.name)
+                }}
+              >
+                게시판으로 이동
+              </button>
 
             <button onClick={() => { AddToFav(team) }}>추가</button>
 
