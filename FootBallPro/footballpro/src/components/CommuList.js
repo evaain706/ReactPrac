@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts, deletePost } from "../store/CommuSlice";
 import CommuPost from "./CommuPost";
 import { useParams } from "react-router-dom";
+import PublicModal from "./PublicModal";
+import { uiActions } from "../store/uiSlice";
 
 
 //게시글 리스트 렌더링 & 글작성 컴포넌트 렌더링
@@ -38,6 +40,7 @@ const CommuList = () => {
       setIsPasswordModalOpen(false);
       setPassword("");
       setErrorMessage("");
+      dispatch(uiActions.publicModalOpen('삭제완료'));
     } else {
       setErrorMessage("비밀번호가 틀렸습니다.");
     }
@@ -48,16 +51,20 @@ const CommuList = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h2 className="text-2xl font-semibold text-center mb-6 text-gray-800">{teamName} 게시판</h2>
-      <CommuPost teamId={teamid} />
+     
+      <h2 className="text-2xl font-bold text-center font-gmarket mb-6 text-gray-800">{teamName} 게시판</h2>
+    
       
+     
+      <CommuPost teamId={teamid} />
+     
       <ul className="space-y-4">
         {posts.map((post) => (
           <li
             className="bg-white shadow-lg rounded-lg p-4 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:bg-slate-100 cursor-pointer group"
             key={post.id}
           >
-            <p className="text-sm text-gray-700">{post.contents}</p>
+            <p className="text-md font-gmarket font-bold text-gray-700">{post.contents}</p>
             <small className="text-xs text-gray-500">{post.date}</small>
             <button 
               onClick={() => handleDelete(post.id)} 
@@ -96,6 +103,7 @@ const CommuList = () => {
           </div>
         </div>
       )}
+      <PublicModal/>
     </div>
   );
 };

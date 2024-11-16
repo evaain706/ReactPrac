@@ -64,11 +64,11 @@ export const fetchPosts = (teamId) => async (dispatch) => {
         ? Object.entries(response.data).map(([id, data]) => ({ id, ...data }))
         : [];
       dispatch(commuActions.setPosts({ teamId, posts }));
-      dispatch(commuActions.setStatus("succeeded"));
+      dispatch(commuActions.setStatus("성공"));
       console.log('불러오기 성공')
     } catch (error) {
       dispatch(commuActions.setError(error.message));
-      dispatch(commuActions.setStatus("failed"));
+      dispatch(commuActions.setStatus("실패"));
     }
   };
   
