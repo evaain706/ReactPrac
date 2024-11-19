@@ -5,6 +5,7 @@ import CommuPost from "./CommuPost";
 import { useParams } from "react-router-dom";
 import PublicModal from "./PublicModal";
 import { uiActions } from "../store/uiSlice";
+import { likePost } from "../store/CommuSlice";
 
 
 //게시글 리스트 렌더링 & 글작성 컴포넌트 렌더링
@@ -32,6 +33,10 @@ const CommuList = () => {
     setIsPasswordModalOpen(true);
   };
 
+  const handleLike = (teamId, postId, isLiked) => {
+    dispatch(likePost({ teamId, postId, isLiked }));
+  };
+
   const handlePasswordSubmit = () => {
     const post = posts.find((p) => p.id === currentPost);
 
@@ -56,7 +61,7 @@ const CommuList = () => {
     
       
      
-      <CommuPost teamId={teamid} />
+      <CommuPost  className="text-center"teamId={teamid} />
      
       <ul className="space-y-4">
         {posts.map((post) => (
@@ -66,12 +71,23 @@ const CommuList = () => {
           >
             <p className="text-md font-gmarket font-bold text-gray-700">{post.contents}</p>
             <small className="text-xs text-gray-500">{post.date}</small>
+            <h2>좋아요:{post.like}</h2>
+            <div className="flex flex-row">
+            <button 
+              onClick={() => handleLike(teamid,post.id,post.isLiked)} 
+              className="mt-2 bg-blue-500 text-white py-1 px-4 rounded-lg hover:bg-blue-600 transition mr-3"
+            >
+              좋아요
+            </button>
             <button 
               onClick={() => handleDelete(post.id)} 
               className="mt-2 bg-red-500 text-white py-1 px-4 rounded-lg hover:bg-red-600 transition"
             >
               삭제
             </button>
+
+            </div>
+        
           </li>
         ))}
       </ul>

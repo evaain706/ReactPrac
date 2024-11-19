@@ -43,6 +43,13 @@ const commuSlice = createSlice({
           (post) => post.id !== postId
         );
       },
+      likePost(state, action) {
+        const { teamId, postId, like } = action.payload;
+        const post = state.postsByTeam[teamId]?.find((post) => post.id === postId);
+        if (post) {
+          post.like = like;
+        }
+      },
     setStatus(state, action) {
       state.status = action.payload;
     },
@@ -54,7 +61,8 @@ const commuSlice = createSlice({
 
 
 
-//thunk 비동기 통신
+//비동기 통신
+
 //팀별 게시글 받아오기
 export const fetchPosts = (teamId) => async (dispatch) => {
     dispatch(commuActions.setStatus("loading"));
@@ -98,6 +106,38 @@ export const fetchPosts = (teamId) => async (dispatch) => {
       dispatch(commuActions.setError(error.message));
     }
   };
+
+  //게시글 좋아요
+
+  export const likePost = ({ teamId, postId }) => async (dispatch, getState) => {
+    try {
+      const state = getState();
+    
+      const currentLikes =
+        state.commu.postsByTeam[teamId]?.find((post) => post.id === postId)?.like || 0;
+   
+      const newLikes = currentLikes + 1;
+  
+      await axios.patch(`${FIREBASE_URL}/posts/${teamId}/${postId}.json`, {
+        like: newLikes,
+      });
+  
+     
+      dispatch(
+        commuActions.likePost({
+          teamId,
+          postId,
+          like: newLikes,
+        })
+      );
+    } catch (error) {
+      dispatch(commuActions.setError(error.message));
+    }
+  };
+  
+
+
+  
 
 export const commuActions = commuSlice.actions;
 export default commuSlice.reducer;

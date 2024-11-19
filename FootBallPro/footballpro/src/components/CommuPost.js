@@ -32,6 +32,7 @@ const CommuPost = ({ teamId }) => {
       contents: content,
       password: password,
       date: yyyymmdd,
+      
     };
 
     if (teamId) {
