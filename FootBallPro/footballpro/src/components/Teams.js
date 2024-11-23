@@ -74,14 +74,14 @@ const Teams = () => {
   }, []);
 
   return (
-    <div className="flex flex-col mx-auto p-4 bg-stone-200">
-      <h1 className="text-4xl font-bold text-center mb-10 font-gmarket">
+    <div className="flex flex-col mx-auto p-4 bg-black">
+      <h1 className="text-white text-4xl font-bold text-center mb-10 font-gmarket">
         English Premier League{" "}
       </h1>
 
       <div>
         <button
-          className="mt-auto me-5 mb-2 text-xl font-bold text-gray-900 focus:outline-none bg-white rounded-full border-spacing-9 border-gray-200 hover:bg-gray-100 hover:text-slate-600 focus:z-10 focus:ring-4 focus:ring-gray-100 font-gmarket "
+          className="mt-auto me-4 mb-2 text-xl font-bold text-gray-900 focus:outline-none bg-white rounded-full border-spacing-9 border-gray-200 hover:bg-gray-100 hover:text-slate-600 focus:z-10 focus:ring-4 focus:ring-gray-100 font-gmarket border-r-8 "
           onClick={() => {
             openFav();
           }}
