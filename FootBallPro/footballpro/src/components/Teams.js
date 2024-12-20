@@ -74,12 +74,12 @@ const Teams = () => {
   }, []);
 
   return (
-    <div className="flex flex-col mx-auto p-4 bg-black">
+    <div className="flex flex-col mx-auto p-4 bg-slate-950">
       <h1 className="text-white text-4xl font-bold text-center mb-10 font-gmarket">
         English Premier League{" "}
       </h1>
 
-      <div>
+      {/* <div>
         <button
           className="mt-auto me-4 mb-2 text-xl font-bold text-gray-900 focus:outline-none bg-white rounded-full border-spacing-9 border-gray-200 hover:bg-gray-100 hover:text-slate-600 focus:z-10 focus:ring-4 focus:ring-gray-100 font-gmarket border-r-8 "
           onClick={() => {
@@ -88,7 +88,7 @@ const Teams = () => {
         >
           추가한 팀 보기
         </button>
-      </div>
+      </div> */}
 
       <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 font-gmarket">
         {teams.map((team) => (
@@ -121,7 +121,7 @@ const Teams = () => {
                 게시판으로 이동
               </button>
 
-            <button onClick={() => { AddToFav(team) }}>추가</button>
+            {/* <button onClick={() => { AddToFav(team) }}>추가</button> */}
 
             <button
               className="absolute top-3 right-3 text-gray-600 font-bold rounded-full border-gray-400 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100"
