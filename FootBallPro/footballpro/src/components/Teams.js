@@ -74,8 +74,8 @@ const Teams = () => {
   }, []);
 
   return (
-    <div className="flex flex-col mx-auto p-4 bg-slate-950">
-      <h1 className="text-white text-4xl font-bold text-center mb-10 font-gmarket">
+    <div className="flex flex-col mx-auto p-4 bg-slate-200">
+      <h1 className="text-black text-4xl font-bold text-center mb-10 font-gmarket">
         English Premier League{" "}
       </h1>
 
